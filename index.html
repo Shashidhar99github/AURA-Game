@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AURA | THE ARCHITECTURAL SEQUENCE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="apple-nav">
+    <div class="nav-container">
+        <div class="logo-wrap">
+            <svg width="22" height="22" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="10" width="80" height="80" rx="20" stroke="black" stroke-width="8"/>
+                <circle cx="50" cy="50" r="20" fill="black"/>
+            </svg>
+            <span>AURA | Sequence</span>
+        </div>
+        <div style="font-size: 12px; opacity: 0.5;">v2.0 Architectural Edition</div>
+    </div>
+</nav>
+
+<div id="custom-cursor">⚪️</div>
+
+<div id="landing-page">
+    <section class="section hero">
+        <h1>AURA.</h1>
+        <p>Mathematical elegance. Pure spatial logic.</p>
+        <button class="btn" id="launch-game-btn">Experience Now</button>
+    </section>
+
+    <section class="section" style="background: #fff; padding-top: 0;">
+        <h2 style="font-size: 3rem; letter-spacing: -0.02em;">Intuitive interaction.</h2>
+        <div class="controls-grid">
+            <div class="control-item">
+                <div class="key-cap">W A S D</div>
+                <h3>Movement</h3>
+                <p>Navigate the architectural loop with fluid momentum and physical inertia.</p>
+            </div>
+            <div class="control-item">
+                <div class="key-cap">MOUSE</div>
+                <h3>Vision</h3>
+                <p>360° spatial awareness. Look around to analyze the logic gates.</p>
+            </div>
+            <div class="control-item">
+                <div class="key-cap">CLICK</div>
+                <h3>Decide</h3>
+                <p>Select the correct door. Speed and accuracy keep the loop alive.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: #000; color: #fff;">
+        <h2 style="font-size: 3rem; letter-spacing: -0.02em;">Brilliant performance.</h2>
+        <div class="feature-grid">
+            <div class="feature-card" style="background: #1c1c1e;">
+                <h3 style="color: #fff;">M-Class Physics</h3>
+                <p>Silky smooth ray-casting and high-fidelity collision detection for a seamless walkthrough.</p>
+            </div>
+            <div class="feature-card" style="background: #1c1c1e;">
+                <h3 style="color: #fff;">Pure Glass</h3>
+                <p>Architectural glass shaders with transmission and thickness simulation for the modern mind.</p>
+            </div>
+            <div class="feature-card" style="background: #1c1c1e;">
+                <h3 style="color: #fff;">Logic Scales</h3>
+                <p>The challenge grows every 20 loops. Mathematical precision meets artistic design.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="section" style="padding: 60px 20px; border-top: 1px solid #d2d2d7;">
+    <p style="color: #86868b; font-size: 14px; margin-bottom: 10px;">
+        Optimized for Desktop Browsers. Built with Three.js Engine and Gemini Spatial Labs.
+    </p>
+    <p style="color: #1d1d1f; font-weight: 500; font-size: 14px;">
+        Made with <span style="color: #ff3b30;">❤️</span> by R. Shashidhar Reddy
+    </p>
+</footer>
+</div>
+
+<div id="game-container">
+    <div id="fade-overlay"></div>
+
+    <div id="ui" class="hidden">
+        <div id="hud-top">
+            <div id="score-hud">LEVEL 1 | ROOM 00</div>
+            <div class="controls-group">
+                <div id="timer">00:40</div>
+                <button id="pause-btn" class="circle-btn" title="Pause">||</button>
+                <button id="quit-btn-hud" class="circle-btn quit-btn" title="Exit to Landing Page">✕</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="start-screen" class="screen">
+        <div class="modal">
+            <h1 style="font-size: clamp(2.5rem, 10vw, 4rem); letter-spacing: -0.04em;">Ready?</h1>
+            <p style="font-size: 1.2rem; color: #86868b; margin: 24px 0 40px;">Click below to enter the sequence.</p>
+            <button class="btn" id="btn-start">Start Sequence</button>
+        </div>
+    </div>
+
+    <div id="pause-screen" class="screen hidden">
+        <div class="modal">
+            <h1>Pause</h1>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                <button class="btn" id="btn-resume">Continue</button>
+                <button class="btn btn-exit" id="btn-exit-to-menu">Exit to Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="fail-screen" class="screen hidden">
+        <div class="modal">
+            <h1 style="color: #ff3b30;">Sequence Ended.</h1>
+            <p id="final-score">Progress: 0 rooms cleared.</p>
+            <button class="btn" onclick="window.location.reload()">Reset</button>
+        </div>
+    </div>
+</div>
+
+
+<script type="importmap">
+    { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/" } }
+</script>
+<script type="module" src="script.js"></script>
+</body>
+</html>
