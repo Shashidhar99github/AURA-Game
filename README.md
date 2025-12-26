@@ -1,4 +1,5 @@
 🚀 AURA | The Architectural Sequence
+Try now: https://aura-game-red.vercel.app/
 
 AURA is a high-performance, browser-based 3D mathematical challenge powered by Three.js.
 It merges minimalist Apple-inspired design with immersive first-person navigation and architectural logic puzzles to create a premium, spatial gameplay experience.
